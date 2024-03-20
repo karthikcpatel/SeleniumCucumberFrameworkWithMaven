@@ -52,6 +52,7 @@ public void killBrowser(Scenario scenario){
 		final byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 		scenario.attach(screenshot, "image/png", scenario.getName());
 	}
-    driver.quit();
+    	driver.quit();
+	System.out.println("This line is added by KP");
 }
 }
