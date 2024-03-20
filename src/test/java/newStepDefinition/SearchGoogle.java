@@ -52,6 +52,7 @@ public void killBrowser(Scenario scenario){
 		final byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 		scenario.attach(screenshot, "image/png", scenario.getName());
 	}
+	System.out.println("Successfully updated the Github.");
     driver.quit();
 }
 }
