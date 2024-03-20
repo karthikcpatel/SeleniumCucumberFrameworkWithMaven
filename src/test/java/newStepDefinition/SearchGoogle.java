@@ -47,14 +47,15 @@ public void i_click_search() throws Throwable {
 }
 
 @After
-public void killBrowser(Scenario scenario){
+public void killBrowser(Scenario scenario) throws InterruptedException {
     if (scenario.isFailed()) {
 		final byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 		scenario.attach(screenshot, "image/png", scenario.getName());
 	}
-    	driver.quit();
-	System.out.println("This line is added by KP");
-	System.out.println("This line is added by KP again.");
+    driver.quit();
+    System.out.println("This line is added by KP");
+	  System.out.println("This line is added by KP again.");
 	
 }
+
 }
