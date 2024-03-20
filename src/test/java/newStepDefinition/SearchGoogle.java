@@ -52,7 +52,10 @@ public void killBrowser(Scenario scenario) throws InterruptedException {
 		final byte[] screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 		scenario.attach(screenshot, "image/png", scenario.getName());
 	}
-	Thread.sleep(2000);
     driver.quit();
+    System.out.println("This line is added by KP");
+	  System.out.println("This line is added by KP again.");
+	
 }
+
 }
