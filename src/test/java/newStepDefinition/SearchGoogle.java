@@ -6,14 +6,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.Before;
 import io.cucumber.java.After;
+import java.util.concurrent.TimeUnit;
 import dataProviders.ConfigFileReader;
 import managers.WebDriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import pageObjects.GoogleObjects;
-
-import java.util.concurrent.TimeUnit;
 
 public class SearchGoogle {
 WebDriver driver;	
