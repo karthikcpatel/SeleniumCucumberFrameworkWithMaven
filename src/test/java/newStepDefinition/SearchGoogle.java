@@ -52,8 +52,6 @@ public void killBrowser(Scenario scenario){
 		scenario.attach(screenshot, "image/png", scenario.getName());
 	}
     	driver.quit();
-	System.out.println("This line is added by KP");
-	System.out.println("This line is added by KP again.");
-	
+
 }
 }

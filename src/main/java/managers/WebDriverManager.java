@@ -27,15 +27,10 @@ public class WebDriverManager {
         	driver = new FirefoxDriver();
 	    	break;
         case CHROME:
-        	//System.setProperty("webdriver.chrome.driver", FileReaderManager.getInstance().getConfigReader().getDriverPath());
-
-			String path = System.getProperty("user.dir");
-			String driverpath = path + "\\drivers\\chromedriver.exe";
-			System.setProperty("webdriver.chrome.driver", driverpath);
+        	System.setProperty("webdriver.chrome.driver", FileReaderManager.getInstance().getConfigReader().getDriverPath());
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.addArguments("--remote-allow-origins=*");
 			driver = new ChromeDriver(chromeOptions);
-
 			break;
         case INTERNETEXPLORER: 
         	System.setProperty("webdriver.ie.driver", FileReaderManager.getInstance().getConfigReader().getDriverPath());
